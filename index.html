@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vytria — A plataforma que revela a verdade por trás dos seus cliques</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --bg: #0b0f17;
+        --bg-light: #111622;
+        --primary: #2ea8ff;
+        --primary-glow: rgba(46,168,255,0.4);
+        --text: #e4e8f0;
+        --text-light: #9aa3b7;
+        --card: #141a26;
+        --radius: 14px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+    }
+
+    body {
+        background: var(--bg);
+        color: var(--text);
+        overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        width: 100%;
+        padding: 25px 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        background: rgba(10, 15, 25, 0.6);
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .nav-logo {
+        font-size: 24px;
+        font-weight: 900;
+        color: var(--primary);
+        letter-spacing: -1px;
+    }
+
+    .nav-links a {
+        color: var(--text-light);
+        margin-left: 26px;
+        font-size: 15px;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+
+    /* HERO */
+    .hero {
+        padding-top: 160px;
+        padding-bottom: 160px;
+        text-align: center;
+        max-width: 950px;
+        margin: auto;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+        line-height: 1.1;
+        font-weight: 900;
+        background: linear-gradient(90deg, #2ea8ff, #68c2ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+        font-size: 20px;
+        margin-top: 20px;
+        color: var(--text-light);
+    }
+
+    .hero-btns {
+        margin-top: 40px;
+    }
+
+    .btn {
+        padding: 16px 34px;
+        border-radius: var(--radius);
+        font-size: 17px;
+        cursor: pointer;
+        border: none;
+        margin: 10px;
+        transition: 0.25s;
+    }
+
+    .btn-primary {
+        background: var(--primary);
+        color: #000;
+        font-weight: 700;
+        box-shadow: 0 0 25px var(--primary-glow);
+    }
+
+    .btn-primary:hover { transform: scale(1.05); }
+
+    .btn-outline {
+        background: transparent;
+        border: 1px solid var(--text-light);
+        color: var(--text-light);
+    }
+    .btn-outline:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+        transform: scale(1.05);
+    }
+
+    /* SECTIONS */
+    section {
+        padding: 120px 60px;
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    h2.sec-title {
+        font-size: 42px;
+        font-weight: 800;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .sec-sub {
+        text-align: center;
+        font-size: 18px;
+        color: var(--text-light);
+        margin-bottom: 60px;
+    }
+
+    /* FEATURES */
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .feature-card {
+        padding: 35px;
+        background: var(--card);
+        border-radius: var(--radius);
+        border: 1px solid #1d2638;
+        transition: 0.25s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--primary);
+    }
+
+    .feature-card h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .feature-card p {
+        font-size: 15px;
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    /* PRICING */
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 28px;
+        margin-top: 40px;
+    }
+
+    .price-card {
+        padding: 40px;
+        background: var(--card);
+        border-radius: var(--radius);
+        border: 1px solid #1d2638;
+        transition: 0.25s;
+    }
+
+    .price-card:hover { transform: translateY(-6px); }
+
+    .price-title { font-size: 26px; font-weight: 700; margin-bottom: 15px; }
+    .price-value { font-size: 40px; font-weight: 900; margin-bottom: 10px; color: var(--primary); }
+
+    .price-list { margin-top: 18px; }
+    .price-list li {
+        margin-bottom: 10px;
+        font-size: 15px;
+        color: var(--text-light);
+    }
+
+    .plan-btn {
+        margin-top: 25px;
+        width: 100%;
+        padding: 15px;
+        border-radius: var(--radius);
+        background: var(--primary);
+        border: none;
+        font-size: 17px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 60px;
+        text-align: center;
+        color: var(--text-light);
+        border-top: 1px solid #121826;
+        margin-top: 120px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="navbar">
+    <div class="nav-logo">VYTRIA</div>
+    <div class="nav-links">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#planos">Planos</a>
+        <a href="#entrar">Entrar</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Saiba exatamente de onde vêm seus cliques.<br>Decida com dados. Cresça com precisão.</h1>
+    <p>A plataforma de rastreamento mais elegante, inteligente e precisa que você já viu.<br>
+    Links rastreados, horários de pico, geolocalização, redes sociais e comportamento real.</p>
+
+    <div class="hero-btns">
+        <button class="btn btn-primary">Criar conta grátis</button>
+        <button class="btn btn-outline">Ver planos</button>
+    </div>
+</div>
+
+<!-- COMO FUNCIONA -->
+<section id="como-funciona">
+    <h2 class="sec-title">Como o Vytria funciona</h2>
+    <p class="sec-sub">Sua operação finalmente enxergando o que sempre esteve oculto.</p>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <h3>1. Crie um link rastreado</h3>
+            <p>Transforme qualquer URL em um link analisável. Solte ele no Instagram, TikTok, YouTube, WhatsApp… e observe tudo acontecer.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>2. Deixe o Vytria trabalhar</h3>
+            <p>Monitoramos cliques em tempo real, detectamos horários, origem, rede social e padrões de comportamento automaticamente.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>3. Veja a verdade nua e crua</h3>
+            <p>Você vê quais horários performam melhor, quais redes trazem resultado e onde está o público que realmente engaja.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>4. Tome decisões com confiança</h3>
+            <p>Mais cliques, mais vendas, mais escala. Decida baseado em dados — não em achismo.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- RECURSOS -->
+<section id="recursos">
+    <h2 class="sec-title">Recursos que mudam o jogo</h2>
+    <p class="sec-sub">Tecnologia de rastreamento de nível profissional — agora acessível.</p>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Horários de Pico</h3>
+            <p>Descubra exatamente quando seu público mais clica. Poste no momento perfeito e aumente engajamento instantaneamente.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Resumo por Rede</h3>
+            <p>Veja a força real de cada rede social e descubra onde está o tráfego que realmente converte.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Geolocalização (Elite)</h3>
+            <p>Cidade, estado e país de cada clique. Ideal para segmentação, anúncios e estratégias regionais.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Links Ilimitados (Elite/Agency)</h3>
+            <p>Para gestores, agências e produtores que precisam monitorar dezenas — ou centenas — de campanhas simultâneas.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PLANOS -->
+<section id="planos">
+    <h2 class="sec-title">Escolha o plano ideal</h2>
+    <p class="sec-sub">Comece grátis. Evolua conforme sua operação cresce.</p>
+
+    <div class="pricing-grid">
+
+        <div class="price-card">
+            <div class="price-title">Free</div>
+            <div class="price-value">R$ 0</div>
+            <ul class="price-list">
+                <li>1 link rastreado</li>
+                <li>Histórico: hoje e ontem</li>
+                <li>Visão Geral</li>
+                <li>Resumo por Rede</li>
+            </ul>
+            <button class="plan-btn">Começar grátis</button>
+        </div>
+
+        <div class="price-card">
+            <div class="price-title">Pro</div>
+            <div class="price-value">R$ 69/mês</div>
+            <ul class="price-list">
+                <li>10 links rastreados</li>
+                <li>Histórico: 30 dias</li>
+                <li>Horários de Pico</li>
+                <li>Visão Geral + Resumo por Rede</li>
+            </ul>
+            <button class="plan-btn">Assinar PRO</button>
+        </div>
+
+        <div class="price-card">
+            <div class="price-title">Elite</div>
+            <div class="price-value">R$ 89/mês</div>
+            <ul class="price-list">
+                <li>Links ilimitados</li>
+                <li>Histórico completo</li>
+                <li>Geolocalização</li>
+                <li>Todas as funcionalidades liberadas</li>
+            </ul>
+            <button class="plan-btn">Assinar ELITE</button>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    Vytria — A plataforma que revela a verdade por trás dos seus cliques.
+</footer>
+
+</body>
+</html>
