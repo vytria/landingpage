@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vytria Agency — White-label para agências e grandes operações</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --bg: #0b0f17;
+        --bg-light: #111622;
+        --primary: #2ea8ff;
+        --primary-glow: rgba(46,168,255,0.4);
+        --text: #e4e8f0;
+        --text-light: #9aa3b7;
+        --card: #141a26;
+        --radius: 16px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+    }
+
+    body {
+        background: var(--bg);
+        color: var(--text);
+        overflow-x: hidden;
+    }
+
+    /* NAV */
+    .navbar {
+        width: 100%;
+        padding: 25px 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        background: rgba(10, 15, 25, 0.6);
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .nav-logo {
+        font-size: 24px;
+        font-weight: 900;
+        color: var(--primary);
+        letter-spacing: -1px;
+    }
+
+    .nav-links a {
+        color: var(--text-light);
+        margin-left: 26px;
+        font-size: 15px;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+
+    /* HERO */
+    .hero {
+        padding-top: 160px;
+        padding-bottom: 180px;
+        text-align: center;
+        max-width: 950px;
+        margin: auto;
+    }
+
+    .hero h1 {
+        font-size: 56px;
+        line-height: 1.1;
+        font-weight: 900;
+        background: linear-gradient(90deg, #2ea8ff, #68c2ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+        font-size: 21px;
+        margin-top: 20px;
+        color: var(--text-light);
+    }
+
+    .btn-primary {
+        background: var(--primary);
+        color: #000;
+        font-weight: 700;
+        padding: 16px 34px;
+        border-radius: var(--radius);
+        margin-top: 40px;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 0 25px var(--primary-glow);
+        font-size: 17px;
+        transition: 0.2s;
+    }
+
+    .btn-primary:hover { transform: scale(1.05); }
+
+    /* SECTIONS */
+    section {
+        padding: 130px 60px;
+        max-width: 1250px;
+        margin: auto;
+    }
+
+    h2.sec-title {
+        font-size: 40px;
+        font-weight: 800;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    p.sec-sub {
+        text-align: center;
+        font-size: 18px;
+        color: var(--text-light);
+        margin-bottom: 50px;
+    }
+
+    /* GRID */
+    .grid {
+        display: grid;
+        gap: 28px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .card {
+        padding: 40px;
+        background: var(--card);
+        border-radius: var(--radius);
+        border: 1px solid #1d2638;
+        transition: 0.25s;
+    }
+
+    .card:hover { 
+        border-color: var(--primary);
+        transform: translateY(-6px);
+    }
+
+    .card h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .card p {
+        font-size: 15px;
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    /* CTA FINAL */
+    .cta {
+        text-align: center;
+        padding: 160px 40px;
+    }
+
+    .cta h2 {
+        font-size: 46px;
+        font-weight: 900;
+    }
+
+    .cta p {
+        margin-top: 20px;
+        font-size: 19px;
+        color: var(--text-light);
+    }
+
+    footer {
+        padding: 60px;
+        text-align: center;
+        color: var(--text-light);
+        border-top: 1px solid #121826;
+        margin-top: 120px;
+    }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="navbar">
+    <div class="nav-logo">VYTRIA</div>
+    <div class="nav-links">
+        <a href="index.html">Voltar ao site</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Vytria Agency — White-label para operações de alto nível</h1>
+    <p>Personalize tudo com sua marca.  
+    Domínio próprio, estrutura premium, links ilimitados e suporte dedicado.</p>
+
+    <button class="btn-primary" onclick="window.location.href='https://wa.me/5547999999999?text=Tenho+interesse+no+Vytria+Agency'">
+        Solicitar proposta
+    </button>
+</div>
+
+<!-- SOBRE -->
+<section>
+    <h2 class="sec-title">O que é o Vytria Agency?</h2>
+    <p class="sec-sub">A solução definitiva para agências, gestores de tráfego e empresas que precisam de escala real.</p>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Domínio próprio (White-label)</h3>
+            <p>Use o Vytria com a SUA marca.  
+            Painel, links, domínio e identidade visual totalmente personalizados.</p>
+        </div>
+
+        <div class="card">
+            <h3>Links ilimitados</h3>
+            <p>Monitore centenas ou milhares de campanhas simultâneas sem qualquer limitação.</p>
+        </div>
+
+        <div class="card">
+            <h3>Histórico completo</h3>
+            <p>Veja toda a jornada de performance desde o primeiro dia, sem expirarem dados.</p>
+        </div>
+
+        <div class="card">
+            <h3>Geolocalização avançada</h3>
+            <p>Saiba exatamente de onde vem seu tráfego: país, estado, cidade e padrões de comportamento.</p>
+        </div>
+
+        <div class="card">
+            <h3>Suporte premium 1:1</h3>
+            <p>Atendimento dedicado direto com a equipe Vytria para qualquer necessidade.</p>
+        </div>
+
+        <div class="card">
+            <h3>Personalizações sob demanda</h3>
+            <p>Funcionalidades especiais, ajustes exclusivos e integrações corporativas.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="cta">
+    <h2>Preparado para operar como uma verdadeira agência?</h2>
+    <p>Solicite uma proposta e receba o plano ideal para sua operação.</p>
+
+    <button class="btn-primary" onclick="window.location.href='https://wa.me/554799999999999?text=Tenho+interesse+no+Vytria+Agency'">
+        Falar com o time
+    </button>
+</div>
+
+<footer>
+    Vytria — Tecnologia profissional para quem leva dados a sério.
+</footer>
+
+</body>
+</html>
